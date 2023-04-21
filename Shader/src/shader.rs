@@ -28,8 +28,10 @@ struct Shader3D<T>{
 
 impl<T> Shader for Shader3D<T>{
     fn new(x: usize, y: usize) -> Self{
-        let mut temp_display = Vec::<Vec<Color>>::with_capacity(y);
-        temp_display
+        Shader3D{
+            polygons: Vec::<Triangle3D<T>>::new(),
+            display: vec![vec![Color::new(0,0,0); x]; y],
+        }
     }
 }
 
