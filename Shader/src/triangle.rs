@@ -21,6 +21,6 @@ impl<T> Triangle<Point2D<T>> for Triangle2D<T> {
         let vectol_a;
         let vectol_b;
         let vectol_c;
-        unimplimented!()
+        unimplemented!()
     }
 }
