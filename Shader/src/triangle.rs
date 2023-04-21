@@ -18,9 +18,9 @@ pub struct Triangle3D<T> {
 
 impl<T> Triangle<Point2D<T>> for Triangle2D<T> {
     fn is_contained(&self, p: Point2D<T>) -> bool {
-        let vectol_a;
-        let vectol_b;
-        let vectol_c;
+//         let vectol_a;
+//         let vectol_b;
+//         let vectol_c;
         unimplemented!()
     }
 }
