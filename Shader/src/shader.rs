@@ -3,14 +3,16 @@ use crate::triangle::*;
 
 pub trait Shader {
     fn new(x: usize, y: usize) -> Self;
+    fn render(&mut self);
 }
 
-struct Color{
+struct Pixel{
     r: u8,
     g: u8,
     b: u8,
 }
 
+#[derive(Clone)]
 impl Color{
     fn new(r: u8, g: u8, b: u8) -> Self{
         Color{
@@ -23,16 +25,18 @@ impl Color{
 
 struct Shader3D<T>{
     polygons: Vec<Triangle3D<T>>,
-    display: Vec<Vec<Color>>
+    display: Vec<Vec<Pixel>>
 }
 
 impl<T> Shader for Shader3D<T>{
     fn new(x: usize, y: usize) -> Self{
         Shader3D{
             polygons: Vec::<Triangle3D<T>>::new(),
-            display: vec![vec![Color::new(0,0,0); x]; y],
+            display: vec![vec![Pixel::new(0,0,0); x]; y],
         }
     }
+    
+    fn render(&mut self)
 }
 
   
