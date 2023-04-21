@@ -9,6 +9,6 @@ struct Shader2D;
 
 impl Shader for Shader2D {
     fn new(x: usize, y: usize) -> Self {
-        unimplimented!()
+        unimplemented!()
     }
 }
