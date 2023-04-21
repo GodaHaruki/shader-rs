@@ -5,10 +5,32 @@ pub trait Shader {
     fn new(x: usize, y: usize) -> Self;
 }
 
-struct Shader2D;
+struct Color{
+    r: u8,
+    g: u8,
+    b: u8,
+}
 
-impl Shader for Shader2D {
-    fn new(x: usize, y: usize) -> Self {
-        unimplemented!()
+impl Color{
+    fn new(r: u8, g: u8, b: u8) -> Self{
+        Color{
+            r,
+            g,
+            b,
+        }
     }
 }
+
+struct Shader3D<T>{
+    polygons: Vec<Triangle3D<T>>,
+    display: Vec<Vec<Color>>
+}
+
+impl<T> Shader for Shader3D<T>{
+    fn new(x: usize, y: usize) -> Self{
+        let mut temp_display = Vec::<Vec<Color>>::with_capacity(y);
+        temp_display
+    }
+}
+
+  
