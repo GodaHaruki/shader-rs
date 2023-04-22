@@ -1,27 +1,13 @@
 use crate::point::*;
 use crate::triangle::*;
+use crate::pixel::*;
 
 pub trait Shader {
     fn new(x: usize, y: usize) -> Self;
     fn render(&mut self);
 }
 
-struct Pixel{
-    r: u8,
-    g: u8,
-    b: u8,
-}
 
-#[derive(Clone)]
-impl Color{
-    fn new(r: u8, g: u8, b: u8) -> Self{
-        Color{
-            r,
-            g,
-            b,
-        }
-    }
-}
 
 struct Shader3D<T>{
     polygons: Vec<Triangle3D<T>>,
@@ -36,7 +22,8 @@ impl<T> Shader for Shader3D<T>{
         }
     }
     
-    fn render(&mut self)
+    fn render(&mut self){
+    }
 }
 
   
