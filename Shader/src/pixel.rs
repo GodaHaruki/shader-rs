@@ -3,14 +3,16 @@ struct Pixel{
     r: u8,
     g: u8,
     b: u8,
+    depth: u8,
 }
 
 impl Pixel {
-  fn new(r: u8, g: u8, b: u8) -> Self {
+  fn new() -> Self {
     Pixel{
-      r,
-      g,
-      b,
+      0,
+      0,
+      0,
+      0,
     }
   }
 }
